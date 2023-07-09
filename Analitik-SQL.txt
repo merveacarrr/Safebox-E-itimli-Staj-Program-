@@ -1,0 +1,15 @@
+Analitik SQL Nedir?
+  Veri analizi ve raporlama için kullanılan SQL sorgularının bir alt kümesidir. Büyük veri kümeleri üzerinde karmaşık hesaplamalar yapmayı, verileri sınıflandırmayı, özetlemeyi ve analiz etmeyi sağlar. Genellikle veri ambarları ve büyük veri platformları gibi analitik işlemler için optimize edilmiş veri tabanlarında kullanılır.
+Analitik SQL'nin Kullanım Alanları Nelerdir?
+	1.Veri Analizi: Büyük veri kümeleri üzerinde analizler yapmak için kullanılır. (belirli bir zaman dilimindeki satış verilerini 	toplamak, ortalama hesaplamaları )
+	2.Raporlama: İşletmelerin performans raporları, finansal raporlar, pazarlama analizleri gibi raporları oluşturmak için kullanılır. 	Verileri filtrelemek, gruplandırmak, sıralamak ve özetlemek gibi işlemler raporlama süreçlerinde sıkça kullanılır.
+	3.Trend Analizi: Veri trendlerini analiz etmek ve gelecekteki eğilimleri tahmin etmek için kullanılabilir(kullanıcı davranışlarını 	izlemek)
+	4.Segmentasyon: Verileri belirli ölçütlere göre sınıflandırmak ve segmentlere ayırmak için kullanılabilir. (satın alma 	davranışlarına göre müşteri segmentlerini tanımlamak )
+	5.Öngörüsel Analiz: Veri modellerini kullanarak gelecekteki olayları tahmin etmek için kullanılabilir. (geçmiş satış verileri 	üzerinden gelecek ayın satış tahminini yapmak )
+Sorgu Örneği:
+       En çok satan ürünler için sorgu:
+SELECT urun, SUM(satis_miktari) AS toplam_satis
+FROM satis_tablosu
+GROUP BY urun
+ORDER BY toplam_satis DESC
+LIMIT 10;
